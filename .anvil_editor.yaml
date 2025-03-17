@@ -1,9 +1,12 @@
 unique_ids:
   assets:
+    Logo-logo.png: '1742248920647455795264949.5156'
+    Logo.png: '174224803257934742042002.541275'
     standard-page.html: EM22IXANSQ3DOHDY5KQ7HREXHHE52ZEU
     theme.css: 5QG6XCFG7EHG6TGKHL3XE4ATSLR7ZZJC
   forms:
     Form1: Y5B2UHXU3OWZYYJJN4UBYTVPYGA7TUHC
   modules: {}
   scripts: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1742248593947338735431293.02594'

@@ -1,25 +1,16 @@
-from ._anvil_designer import Form1Template
-from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 
-
-class Form1(Form1Template):
-  def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-
-  def Searchbar_change(self, **event_args):
-    """This method is called when the text in this text area is edited"""
-    pass
-
-  def Search_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    
-
-    # Lista med potatisar
+# This is a server module. It runs on the Anvil server,
+# rather than in the user's browser.
+#
+# To allow anvil.server.call() to call functions here, we mark
+# them with @anvil.server.callable.
+# Here is an example - you can replace it with your own:
+#
+# # Lista med potatisar
 potatis_typer = {
     'king edward': 'mjölig',
     'bintje': 'mjölig',
