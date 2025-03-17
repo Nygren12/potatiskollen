@@ -67,12 +67,3 @@ potatis_typer = {
     'timo': 'fast',
     'jazzy': 'fast'
 }
-
-# Användaren skriver in en potatissort
-potatis = input("Vilken potatis har du? ").strip().lower()
-
-# Kollar om potatisen finns i listan och skriver ut typen
-if potatis in potatis_typer:
-    print(f"{potatis.capitalize()} räknas som en {potatis_typer[potatis]} potatis.")
-else:
-    print("Antingen har du stavat fel, ditt miffo. Eller så finns inte potatisen i databasen just nu.")
