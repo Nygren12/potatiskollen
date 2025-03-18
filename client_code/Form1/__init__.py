@@ -10,17 +10,8 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
-  def Searchbar_change(self, **event_args):
-    """This method is called when the text in this text area is edited"""
-    pass
-
-  def Search_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
     
-# Användaren skriver in en potatissort
-potatis = input("Vilken potatis har du? ").strip().lower()
-
+  def text_box_pressed_enter(self, **event_args):
     # Lista med potatisar
 potatis_typer = {
     'king edward': 'mjölig',
@@ -64,11 +55,14 @@ potatis_typer = {
     'rosara': 'färsk',
     'solist': 'färsk',
     'swift': 'färsk',
-    'färskpotatis': 'färsk, duuh',
+    'färskpotatis': 'färsk',
     'primörpotatis': 'färsk',
     'timo': 'fast',
     'jazzy': 'fast'
 }
+
+# Användaren skriver in en potatissort
+potatis = input("Vilken potatis har du? ").strip().lower()
 
 # Kollar om potatisen finns i listan och skriver ut typen
 if potatis in potatis_typer:
