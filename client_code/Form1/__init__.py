@@ -18,6 +18,8 @@ class Form1(Form1Template):
   def Search_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     
+# Användaren skriver in en potatissort
+potatis = input("Vilken potatis har du? ").strip().lower()
 
     # Lista med potatisar
 potatis_typer = {
@@ -62,8 +64,14 @@ potatis_typer = {
     'rosara': 'färsk',
     'solist': 'färsk',
     'swift': 'färsk',
-    'färskpotatis': 'färsk',
+    'färskpotatis': 'färsk, duuh',
     'primörpotatis': 'färsk',
     'timo': 'fast',
     'jazzy': 'fast'
 }
+
+# Kollar om potatisen finns i listan och skriver ut typen
+if potatis in potatis_typer:
+    print(f"{potatis.capitalize()} räknas som en {potatis_typer[potatis]} potatis.")
+else:
+    print("Antingen har du stavat fel, ditt miffo. Eller så finns inte potatisen i databasen just nu.")
