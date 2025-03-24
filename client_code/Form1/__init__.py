@@ -10,8 +10,13 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+  def potatis_pressed_enter(self, **event_args
+  # Användaren skriver in en potatissort
+  potatis = input("Vilken potatis har du? ").strip().lower()
+
+    """This method is called when the user presses Enter in this text box"""
     
-  def text_box_pressed_enter(self, **event_args):
     # Lista med potatisar
 potatis_typer = {
     'king edward': 'mjölig',
@@ -61,11 +66,11 @@ potatis_typer = {
     'jazzy': 'fast'
 }
 
-# Användaren skriver in en potatissort
-potatis = input("Vilken potatis har du? ").strip().lower()
 
 # Kollar om potatisen finns i listan och skriver ut typen
 if potatis in potatis_typer:
-    print(f"{potatis.capitalize()} räknas som en {potatis_typer[potatis]} potatis.")
+    print(f"{potatis.capitalize()} är en {potatis_typer[potatis]} potatis.")
 else:
     print("Antingen har du stavat fel, ditt miffo. Eller så finns inte potatisen i databasen just nu.")
+
+  

@@ -5,19 +5,14 @@ components:
     properties: {align: center, bold: true, text: Potatiskollen, visible: true}
     type: Label
   - components:
-    - event_bindings: {pressed_enter: text_box_pressed_enter}
-      name: text_box
+    - event_bindings: {pressed_enter: potatis_pressed_enter}
+      name: potatis
       properties: {}
       type: TextBox
     layout_properties: {grid_position: 'LLLGMA,YXCILL'}
     name: rich_text_1
     properties: {content: 'Skriv in vilken potatis du har, så söker vi i vår databas för att ta reda på om den är fast eller mjölig.'}
     type: RichText
-  - event_bindings: {click: Search_button_click}
-    layout_properties: {grid_position: 'OLEATO,MHBGAO'}
-    name: Search_button
-    properties: {bold: true, text: Sök i databasen}
-    type: Button
   layout_properties: {slot: default}
   name: column_panel_1
   properties: {col_widths: '{}'}
