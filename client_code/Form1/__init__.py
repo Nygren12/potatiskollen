@@ -10,7 +10,9 @@ class Form1(Form1Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  def potatis_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
 def potatis_pressed_enter(self, **event_args):
-  # Call your 'send_feedback' server function
-  # pass in name, email and feedback as arguments
   anvil.server.call('send_feedback', potatis).show()
