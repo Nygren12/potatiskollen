@@ -10,9 +10,9 @@ components:
     name: text_area_1
     properties: {enabled: false, text: 'Skriv in namnet på den potatis du vill söka efter, så kommer vi att berätta om den är fast eller mjölig.'}
     type: TextArea
-  - event_bindings: {pressed_enter: potatis_pressed_enter}
-    layout_properties: {grid_position: 'LJAVFX,SFEOAX'}
-    name: potatis
+  - event_bindings: {pressed_enter: text_box_1_pressed_enter}
+    layout_properties: {grid_position: 'LNOMQJ,KLXFVW'}
+    name: text_box_1
     properties: {}
     type: TextBox
   - event_bindings: {click: button_1_click}
@@ -29,6 +29,6 @@ components:
   properties: {height: 315.8934020996094, source: _/theme/Logo.png}
   type: Image
 container:
-  properties: {background: 'theme:On Primary', html: '@theme:standard-page.html', visible: true}
+  properties: {background: '', foreground: 'theme:Primary', html: '@theme:standard-page.html', visible: true}
   type: HtmlTemplate
 is_package: true
