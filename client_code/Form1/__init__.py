@@ -11,11 +11,10 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
 
-def button_1_click(user_input = self.text_box_1.text.strip().lower(), **event_args):
-    """This method is called when the button is clicked"""
-  
-  
-x_typer = {
+  def text_box_1_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    self.item['my_text'] = self.text_box_1.text.strip().lower()
+    typer = {
     'king edward': 'mjölig',
     'bintje': 'mjölig',
     'melody': 'fast',
@@ -44,27 +43,24 @@ x_typer = {
     'ratte': 'fast',
     'sava': 'fast',
     'sparris': 'fast',
-    'blå Kongo': 'färgad',
-    'cecile': 'färgad',
-    'duble fun': 'färgad',
-    'violet queen': 'färgad',
-    'early puritan': 'färsk',
-    'estelle': 'färsk',
-    'magda': 'färsk',
-    'maria': 'färsk',
-    'marilyn': 'färsk',
-    'rocket': 'färsk',
-    'rosara': 'färsk',
-    'solist': 'färsk',
-    'swift': 'färsk',
-    'färskpotatis': 'färsk',
-    'primörpotatis': 'färsk',
+    'blå Kongo': 'mjölig',
+    'cecile': 'fast',
+    'violet queen': 'ganska fast',
+    'early puritan': 'lite mjölig',
+    'estelle': 'fast',
+    'magda': 'fast',
+    'maria': 'fast',
+    'marilyn': 'fast',
+    'rocket': 'fast',
+    'rosara': 'fast',
+    'solist': 'fast',
+    'swift': 'fast',
     'timo': 'fast',
+    'kuk': 'sak som kanske intresserar dig. Men det är då fan inte en',
     'jazzy': 'fast'
 }
-
 # Kollar om potatisen finns i listan och skriver ut typen
-if str(x) in x_typer:
-    print(f"{x.capitalize()} är en {x_typer[x]} potatis.")
-else:
-    print("Antingen har du stavat fel. Eller så finns inte potatisen i databasen just nu.")
+    if self.item['my_text'] in typer:
+      alert (f"{self.item['my_text'].capitalize()} är en {typer[self.item['my_text']]} potatis.")
+    else:
+      alert("Antingen har du stavat fel, eller så finns inte potatisen i databasen just nu. Kan också vara så att det är något fel i programmets kod som inte fungerar som det ska.")
