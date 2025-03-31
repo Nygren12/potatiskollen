@@ -5,21 +5,16 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 
-
 class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
 
-user_input = self.text_box_1.text.strip().lower()
-x = user_input    
-
+def button_1_click(user_input = self.text_box_1.text.strip().lower(), **event_args):
+    """This method is called when the button is clicked"""
   
-def text_box_1_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    # Lista med potatisar
-
+  
 x_typer = {
     'king edward': 'mjölig',
     'bintje': 'mjölig',
@@ -70,8 +65,6 @@ x_typer = {
 
 # Kollar om potatisen finns i listan och skriver ut typen
 if str(x) in x_typer:
-  print(f"{x.capitalize()} är en {x_typer[x]} potatis.")
+    print(f"{x.capitalize()} är en {x_typer[x]} potatis.")
 else:
-  print("Antingen har du stavat fel. Eller så finns inte potatisen i databasen just nu.")
-
-
+    print("Antingen har du stavat fel. Eller så finns inte potatisen i databasen just nu.")
