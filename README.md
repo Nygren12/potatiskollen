@@ -1,3 +1,6 @@
+Ibland har man potatis som man inte vet om den är fast eller mjölig. Det problemet löser detta program. Skriv bara in vilken potatis du har så får du veta direkt om den är fast eller mjölig.
+
+
 # About This [Anvil](https://anvil.works/?utm_source=github:app_README) App
 
 ### Build web apps with nothing but Python.
